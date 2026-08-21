@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Badyoung</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+</head>
+<body>
+	<div class="no-flex">
+		<h2>Ask BADYOUNG</h2>
+	</div>
+    <div id="chat-container">
+        <div id="messages"></div>
+        <div id="input-area">
+            <div id="mode-selector">
+                <label><input type="radio" name="mode" value="chat" checked> Chat</label>
+                <label><input type="radio" name="mode" value="image"> Generate Image</label>
+            </div>
+            <div id="image-options" style="display:none;">
+                <select id="image-model-select"></select>
+                <select id="aspect-ratio" title="Aspect ratio">
+                    <option value="1:1">Square (1:1)</option>
+                    <option value="9:16">Portrait (9:16)</option>
+                    <option value="16:9">Landscape (16:9)</option>
+                    <option value="3:4">Portrait (3:4)</option>
+                    <option value="4:3">Landscape (4:3)</option>
+                </select>
+            </div>
+            <div id="chat-options" style="display:none;">
+                <select id="chat-model-select"></select>
+            </div>
+        <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
+        <button id="send-btn">Send</button>
+    </div>
+        <div id="image-result" style="display:none; margin-top:10px; text-align:center;"></div>
+	</div>
+    <div class="box">
+		<br>
+		<a href="https://songcuya.com" style="text-decoration: underline;"><p>HOME</p></a>
+		<p>[?] Send Email: 
+		  <a href="mailto:wscaspejr@songcuya.com" style="text-decoration: underline;">wscaspejr@songcuya.com</a>
+		</p>
+		<br>
+	</div>
+    <script src="./askai.js"></script>
+
+</body>
+</html>

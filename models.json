@@ -1,0 +1,49 @@
+{
+  "chatModels": [
+    {
+      "value": "gemma4:cloud",
+      "label": "gemma4:cloud"
+    },
+    {
+      "value": "minimax-m3:cloud",
+      "label": "minimax-m3:cloud"
+    },
+    {
+      "value": "nemotron-3-nano:30b-cloud",
+      "label": "nemotron-3-nano:30b-cloud"
+    },
+    {
+      "value": "nemotron-3-super:cloud",
+      "label": "nemotron-3-super:cloud"
+    },
+    {
+      "value": "nemotron-3-ultra:cloud",
+      "label": "nemotron-3-ultra:cloud"
+    }
+  ],
+  "imageModels": [
+    {
+      "value": "flux",
+      "label": "Flux (Pollinations)",
+      "provider": "pollinations",
+      "default": true
+    },
+    {
+      "value": "flux-schnell",
+      "label": "Flux Schnell (Pollinations)",
+      "provider": "pollinations"
+    },
+    {
+      "value": "gptimage",
+      "label": "GPT-Image (Pollinations)",
+      "provider": "pollinations"
+    },
+    {
+      "value": "sdxl",
+      "label": "SDXL (Pollinations)",
+      "provider": "pollinations"
+    }
+  ],
+  "defaultChat": "gemma4:cloud",
+  "defaultImage": "flux"
+}

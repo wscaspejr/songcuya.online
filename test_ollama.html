@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+  	<script>
+        async function testOllama() {
+        const url = "https://songcuya.com/ollama/api/tags";
+        console.log("Testing connection to:", url);
+    
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const data = await response.json();
+                console.log("✅ SUCCESS! Connection established.");
+                console.log("Available models:", data.models);
+                alert("Ollama Connection Successful!");
+            } else {
+                console.error("❌ Server responded with error:", response.status);
+                alert("Server Error: " + response.status);
+            }
+        } catch (error) {
+            console.error("❌ Connection Failed:", error);
+            alert("Connection Failed. Check Console (F12) for CORS or Network errors.");
+        }
+    }
+    
+    testOllama();
+
+    </script>
+</body>
+</html>
