@@ -1,8 +1,16 @@
 {
   "chatModels": [
+        {
+      "value": "badyoung",
+      "label": "badyoung"
+    },
     {
       "value": "gemma4:cloud",
       "label": "gemma4:cloud"
+    },
+    {
+      "value": "gemma4:31b-cloud",
+      "label": "gemma4:31b-cloud"
     },
     {
       "value": "minimax-m3:cloud",
@@ -44,6 +52,6 @@
       "provider": "pollinations"
     }
   ],
-  "defaultChat": "gemma4:cloud",
+  "defaultChat": "badyoung",
   "defaultImage": "flux"
 }
