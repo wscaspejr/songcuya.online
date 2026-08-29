@@ -2,7 +2,7 @@ body{
 	/*height: 100vh;*/
 	font-family: 'Inter', sans-serif;
 	line-height: 1.7;
-    color: #333333;
+    color: #101010;
 	background-color: rgba(230, 220, 240, 0.4);
 	background-image: url('./backgroundImage.png');
 	background-size: cover;
@@ -13,24 +13,27 @@ h1	{
     letter-spacing: 0.05em;
 	text-align: center;
 	color: #002D86;
+    line-height: 0.5;
 	}
 h2	{
 	text-align: center;
 	color: #002D86;
+    line-height: 1;
 	}
 a	{
 	text-decoration: none;
-	color: #333333;
+	color: #101010;
 	}
 	a:hover {
 		color: #ff0000;
 		text-decoration: underline;
-	}
+        letter-spacing: 0.05em;
+    }
 p	{
-	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+
 div {
 	margin-left:auto;
 	margin-right:auto;
@@ -39,16 +42,16 @@ div {
 	align-items: center;
 	}
 	.no-bgnd {
+        /* background-color: rgba(255, 255, 255, 0.10); */
 		width: 100%;
-		max-width: 500px;
-		min-width: 305px;
-
+        margin-top: 0px;
+	    margin-bottom: 0px;
 	}
 	.box {
 		width: 100%;
 		max-width: 500px;
 		min-width: 305px;
-		background-color: rgba(255, 255, 255, 0.25);
+		background-color: rgba(255, 255, 255, 0.30);
 		border: none;
 		box-shadow: 0px 0px 10px rgba(30, 0, 50, 0.3);
 		box-sizing: border-box;
@@ -76,7 +79,40 @@ div {
 	.box-button:hover{
 		text-decoration-color: rgb(150, 150, 150);
 		background-color: #ff0000;
+    }
+    .text {
+        width: 95%;
+        display: block;
+        text-align: left;
+        text-indent: 20px;
+        margin-left: 10px;
 	}
+        .text ul {
+        padding-left: 30px;   /* indent list markers */
+        margin: 0.5rem 0;
+        }
+    
+    .text li {
+        margin-bottom: 0.25rem;
+        }
+    
+    .special-model {
+        font-weight: bold;
+        color: #002D86;
+    }
+
+    .badge {
+        background-color: #FFD700;
+        color: #000;
+        font-size: 0.7em;
+        padding: 2px 6px;
+        border-radius: 10px;
+        margin-left: 8px;
+        vertical-align: middle;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
 	.box-list {
 		width: 98%;
 		max-width: 500px;
