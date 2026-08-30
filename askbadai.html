@@ -16,27 +16,34 @@
     <div id="chat-container">
         <div id="messages"></div>
         <div id="input-area">
-            <div id="mode-selector">
-                <label><input type="radio" name="mode" value="chat" checked> Chat</label>
-                <label><input type="radio" name="mode" value="image"> Generate Image</label>
-            </div>
-            <div id="image-options" style="display:none;">
-                <select id="image-model-select"></select>
-                <select id="aspect-ratio" title="Aspect ratio">
-                    <option value="1:1">Square (1:1)</option>
-                    <option value="9:16">Portrait (9:16)</option>
-                    <option value="16:9">Landscape (16:9)</option>
-                    <option value="3:4">Portrait (3:4)</option>
-                    <option value="4:3">Landscape (4:3)</option>
-                </select>
-            </div>
-            <div id="chat-options" style="display:none;">
-                <select id="chat-model-select"></select>
-            </div>
-        <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
-        <button id="send-btn">Send</button>
-    </div>
-        <div id="image-result" style="display:none; margin-top:10px; text-align:center;"></div>
+                <div id="mode-selector">
+                    <label><input type="radio" name="mode" value="chat" checked> Chat</label>
+                    <label><input type="radio" name="mode" value="image"> Generate Image</label>
+                    <div id="image-options" style="display:none;">
+                        <div class = "input-box" style="gap: 20px;">
+                            <select id="image-model-select"></select>
+                            <select id="aspect-ratio" title="Aspect ratio">
+                                <option value="1:1">Square (1:1)</option>
+                                <option value="9:16">Portrait (9:16)</option>
+                                <option value="16:9">Landscape (16:9)</option>
+                                <option value="3:4">Portrait (3:4)</option>
+                                <option value="4:3">Landscape (4:3)</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div id="chat-options" style="display:none;">
+                        <select id="chat-model-select"></select>
+                    </div>
+                </div>
+                <div class = "input-box">
+                    <textarea type="text" id="user-input" placeholder="Type a message..." autocomplete="off"></textarea>
+                    <button id="send-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.047a.5.5 0 0 1 .54.1z"/>
+                            </svg>
+                    </button>
+                </div>
+                <div id="image-result"></div>
+        </div>
 	</div>
     <div class="box">
 		<br>

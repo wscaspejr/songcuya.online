@@ -101,6 +101,18 @@ function restoreSavedModel() {
 function toggleModeUI() {
     const isImageMode = currentMode === 'image';
 
+    // --- DISABLE/ENABLE MESSAGES DIV ---
+    if (isImageMode) {
+        messagesDiv.style.pointerEvents = 'none'; // Prevents scrolling/clicking
+        messagesDiv.style.opacity = '0.5';        // Visual "grayed out" effect
+        messagesDiv.style.userSelect = 'none';    // Prevents text selection
+    } else {
+        messagesDiv.style.pointerEvents = 'auto';  // Restores interaction
+        messagesDiv.style.opacity = '1';         // Restores full color
+        messagesDiv.style.userSelect = 'auto';     // Restores text selection
+    }
+    // ----------------------------------
+
     chatContainer.classList.toggle('image-mode', isImageMode);
     userInput.placeholder = isImageMode
         ? "Describe the image you want to generate..."
@@ -110,8 +122,8 @@ function toggleModeUI() {
 
     if (isImageMode) {
         modelSelect = modelSelectImage;
-        imageOptionsDiv.style.display = 'flex';
         chatOptionsDiv.style.display = 'none';
+        imageOptionsDiv.style.display = 'flex';
     } else {
         modelSelect = modelSelectChat;
         imageOptionsDiv.style.display = 'none';
@@ -137,18 +149,6 @@ function addMessage(role, text) {
     messagesDiv.appendChild(div);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
     return div;
-}
-
-function showImage(imageUrl, prompt) {
-    imageResultDiv.innerHTML = `
-        <img src="${imageUrl}" alt="${prompt}" loading="lazy" onload="this.style.opacity=1">
-        <div class="image-actions">
-            <a href="${imageUrl}" target="_blank" download="generated-image.png" class="btn-download">Download</a>
-            <button onclick="copyImageUrl('${imageUrl}')" class="btn-copy">Copy URL</button>
-        </div>
-        <p class="image-prompt"><strong>Prompt:</strong> ${prompt}</p>
-    `;
-    imageResultDiv.style.display = 'flex';
 }
 
 function showImageError(message) {
@@ -258,14 +258,26 @@ async function generateImage(prompt) {
 
         loadingMsg.remove();
         showImage(imageUrl, prompt);
-        addMessage('assistant', `✅ Image generated successfully using ${modelSelect.value} (${ratio})`);
+        //addMessage('assistant', `Image generated successfully using ${modelSelect.value} (${ratio})`);
 
     } catch (error) {
         console.error("Image generation error:", error);
         loadingMsg.remove();
         showImageError("Failed to generate image. Please try again.");
-        addMessage('assistant', '❌ Error: Could not generate image.');
+        //addMessage('assistant', '❌ Error: Could not generate image.');
     }
+}
+
+function showImage(imageUrl, prompt) {
+    imageResultDiv.innerHTML = `
+        <img src="${imageUrl}" alt="${prompt}" loading="lazy" onload="this.style.opacity=1">
+        <div class="image-actions">
+            <a href="${imageUrl}" target="_blank" download="generated-image.png" class="btn-download">Download</a>
+            <button onclick="copyImageUrl('${imageUrl}')" class="btn-copy">Copy URL</button>
+        </div>
+        <p class="image-prompt"><strong>Prompt:</strong> ${prompt}</p>
+    `;
+    imageResultDiv.style.display = 'flex';
 }
 
 function copyImageUrl(url) {

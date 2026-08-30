@@ -32,23 +32,23 @@
   "imageModels": [
     {
       "value": "flux",
-      "label": "Flux (Pollinations)",
+      "label": "Flux",
       "provider": "pollinations",
       "default": true
     },
     {
       "value": "flux-schnell",
-      "label": "Flux Schnell (Pollinations)",
+      "label": "Flux Schnell",
       "provider": "pollinations"
     },
     {
       "value": "gptimage",
-      "label": "GPT-Image (Pollinations)",
+      "label": "GPT-Image",
       "provider": "pollinations"
     },
     {
       "value": "sdxl",
-      "label": "SDXL (Pollinations)",
+      "label": "SDXL",
       "provider": "pollinations"
     }
   ],
