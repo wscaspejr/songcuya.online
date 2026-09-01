@@ -176,8 +176,21 @@ async function sendMessage() {
 
 async function sendChatMessage(text) {
     chatHistory.push({ role: 'user', content: text });
+    
+    const selectedModel = modelSelect.value; 
+    const modelMark = document.createElement('div');
+    modelMark.classList.add('model-name-mark'); 
+    modelMark.innerText = selectedModel;
+    messagesDiv.appendChild(modelMark);
 
+   
     const botMsgDiv = addMessage('assistant', '...');
+    botMsgDiv.innerText = ""; 
+
+    // const textContainer = document.createElement('span');
+    // textContainer.innerText = "..."; 
+    // botMsgDiv.appendChild(textContainer);
+
     let fullResponse = "";
 
     try {
@@ -219,7 +232,7 @@ async function sendChatMessage(text) {
         chatHistory.push({ role: 'assistant', content: fullResponse });
 
     } catch (error) {
-        botMsgDiv.innerText = "❌ Error: Could not connect to chat server.";
+        botMsgDiv.innerText = "❌ Error: Could not connect to chat server. Usage may be limited. Please try again later.";
         console.error(error);
     }
 }
@@ -264,7 +277,7 @@ async function generateImage(prompt) {
         console.error("Image generation error:", error);
         loadingMsg.remove();
         showImageError("Failed to generate image. Please try again.");
-        //addMessage('assistant', '❌ Error: Could not generate image.');
+        //addMessage('assistant', '❌ Error: Could not generate image. Usage may be limited. Please try again later.');
     }
 }
 

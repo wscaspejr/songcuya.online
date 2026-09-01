@@ -14,7 +14,7 @@
 		<meta name="twitter:card" 		content="summary_large_image">
 		<meta name="twitter:title" 		content="Songcuya Online">
 		<meta name="twitter:description" content="Discover what's inside. Nextcloud, AI Chat, Bitcoin and Crypto Reports.">
-		<meta name="twitter:image" 		content="https://songcuya.online/favicon/android-chrome-512x512.png">
+		<meta name="twitter:image" 		content="https://songcuya.com/favicon/android-chrome-512x512.png">
 		<title>Songcuya Online</title>
 		<link rel="stylesheet" type="text/css" href="./styles.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -23,116 +23,57 @@
 		<link rel="manifest" href="./favicon/site.webmanifest">
 	</head>
 	<body>
-		<h1>BADYOUNGSERVER</h1>
-		<h2>on songcuya.com</h2>
-		<div class="no-bgnd">
-			<a href="https://songcuya.com"><img src="./favicon/android-chrome-192x192.png" alt="Favicon Icon" width="80" height="80"></img></a>
-			<iframe src="https://free.timeanddate.com/clock/ia1pmn0o/n145/fn13/fs20/fc002d86/tct/pct/pd2/tt1/tw1/tm1" frameborder="0" width="230" height="60" allowtransparency="false"></iframe>
-		</div>
+		<nav>
+			<a href="https://songcuya.com"><img src="./favicon/android-chrome-192x192.png" alt="Favicon Icon" width="50" height="50"></img></a>
+			<span><h2>BADYOUNGSERVER</h2></span>
+		</nav>
 		<div class = "box">
 			<h2>Cloud Storage</h2>
-			<div class = "text">
-				<p>A home-hosted storage in the cloud. Powered by <a href="https://nextcloud.com" target="_blank"><b>Nextcloud</b>.</a>
+			<p>
+				A home-hosted storage in the cloud using <a href="https://nextcloud.com" target="_blank"><b>Nextcloud</b></a> platform.
 				Provides storage for all file types. Cloud is just a computer located in a certain place.
-				It is not a thing in which rain comes from.</p>
-				<br>
-			</div>
-			<div class = "box-go">
-				<a href="./nextcloud/index.php">
-					<h2>GO</h2>
-				</a>
-			</div>
+				It is not a thing in which rain comes from.
+			</p>
+			<a href="./nextcloud/index.php" class = "box-go">GO</a>
 		</div>
 		<div class="box">
-			<h2>A.I.</h2>
-			<div class = "text">
-        		<p>Experience the power of local LLMs. 
-					Powered by the Ollama API, this interface provides direct access to high-performance open-weights models,
-  					including my custom-tuned <b>Badyoung</b> for a more personalized interaction.<br>
-				<b>Models:</b></p>
+			<h2>A.I.</h2>			
+        	<p>
+				Experience the power of local LLMs. 
+				Powered by the Ollama API, this interface provides direct access to high-performance open-weights models,
+  				including my custom-tuned <b>Badyoung</b> for a more personalized interaction.
+			</p>
+			<p><b>Models:</b></p>
 				<ul id="model-list"></ul>
-        		<br>
-			</div>
-			<div class = "box-go">
-				<a href="./askbadai.html">
-					<h2>GO</h2>
-				</a>
-			</div>
-			<br>
-			<div class = "text">
-				<p>Open Chat in more advanced Open-WebUI Interface.</p>
-			</div>
-			<br>
-			<div class = "box-go">
-				<a href="https://chat.songcuya.com" target="_blank">
-					<h2>GO</h2>
-				</a>
-			</div>
+			<a class = "box-go" href="./askbadai.html">GO</a>
+			<p>Open Chat in more advanced Open-WebUI interface.</p>
+			<a class = "box-go" href="https://chat.songcuya.com" target="_blank">GO</a>
 		</div>
 		<div class = "box">
 			<h2>Media Player</h2>
 			<p>Audio and video player.</p>
-			<br>
-			<div class = "box-go">
-				<a href="./fxdplayer.html">
-					<h2>GO</h2>
-				</a>
-			</div>
+			<a class = "box-go" href="./fxdplayer.html">GO</a>
 		</div>
 		<div class = "box">
 			<h2>Bitcoin</h2>
 			<script src="https://widgets.coingecko.com/gecko-coin-ticker-widget.js"></script>
 			<gecko-coin-ticker-widget locale="en" transparent-background="true" initial-currency="usd" outlined="false"></gecko-coin-ticker-widget>
 			<br>
-			<div class = "text">
-				<ul>
-				<p><a href="./bitcoin.pdf" target="_blank">Download Bitcoin <b>Whitepaper</b></a></p>
-				<p><a href="https://www.binance.com/en-PH/trade/BTC_USDT?type=spot" target="_blank" >Launch Chart in <b>Binance</b></a></p>
-				<p><a href="https://www.binance.com/register?ref=11278370" target="_blank">Trade Bitcoin and Crypto in <b>Binance</b></a></p>
-				</ul>
-			</div>
-			<br>
+			<a class="links" href="./bitcoin.pdf" target="_blank">Download Bitcoin <b>Whitepaper</b></a>
+			<a class="links" href="https://www.binance.com/en-PH/trade/BTC_USDT?type=spot" target="_blank" >Launch Chart in <b>Binance</b></a>
+			<a class="links" href="https://www.binance.com/register?ref=11278370" target="_blank">Trade Bitcoin and Crypto in <b>Binance</b></a>
 		</div>		
 		<div class = "box">
 			<h2>Deep Dives into Digital Assets</h2>
-			<div class = "text">
+			<div>
 				<p>Analyzing institutional flows, regulatory shifts, and market dynamics in the cryptocurrency space.</p>
-				<br>
 			</div>
-			<div class = "box-go">
-				<a href="https://fitech.songcuya.com" target="blank">
-					<h2>GO</h2>
-				</a>
-			</div>
+			<a class = "box-go" href="https://fitech.songcuya.com" target="blank">GO</a>
 		</div>	
-		<div class="box">
-			<br>
-			<a href="https://songcuya.com" style="text-decoration: underline;"><p>HOME</p></a>
+		<footer>
+			<a href="https://songcuya.com" style="text-decoration: underline;">HOME</a>
 			<p>[?] Send Email: <a href="mailto:wscaspejr@songcuya.com" style="text-decoration: underline;">wscaspejr@songcuya.com</a></p>
-			<br>
-		</div>
-
-	<script>
-		fetch("./models.json")
-			.then(response => response.json())
-			.then(data => {
-				const list = document.getElementById('model-list');
-				if (list) {
-					list.innerHTML = '';
-										data.chatModels.forEach(model => {
-						const li = document.createElement('li');
-						if (model.value === 'badyoung') {
-							li.classList.add('special-model');
-							li.innerHTML = `${model.label} <span class="badge">Custom</span>`;
-						} else {
-							li.textContent = model.label;
-						}
-						list.appendChild(li);
-					});
-				}
-			})
-			.catch(error => console.error('Error loading models:', error));
-	</script>
-
+		</footer>
+	<script src="./script.js"></script>
 	</body>
 </html>	

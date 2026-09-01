@@ -5,43 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foxden - AV Player</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="stylesheet" type="text/css" href="./avplayer.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 </head>
 <body>
-	<div class="no-flex">
+	<nav>
+		<a href="https://songcuya.com"><img src="./favicon/android-chrome-192x192.png" alt="Favicon Icon" width="50" height="50"></img></a>
+		<span><h2>BADYOUNGSERVER</h2></span>
+	</nav>
+	<div class="box">
 		<h2 id="currentMediaInfo">Select Files...</h2>
-		<p>Now Playing</p><br>
+		<p>Now Playing</p>
 	</div>
 	<div class="box">
-		<br>
 		<video id="videoPlayer" controls style="display: none; max-width: 95%; height: 300px;"></video>
 		<audio id="audioPlayer" controls></audio>
-		<br>
 		<p>
 			<button class="box-button" onclick="playPrevious()">⏮️</button>
 			<button class="box-button" onclick="playNext()">⏭️</button>
 			<button class="box-button" onclick="playRandom()">🔀</button>
 		</p>
-		<br>
 		<div class="box-button">
 			<input type="file" id="fileInput" multiple accept="audio/*,video/*">
 		</div>
-		<br>
 		<div class="box-list">
 			<h2>Playlist</h2>
-			<ul id="playlist"></ul>
+			<ul id="playlist">Playlist is empty. Please select some files.</ul>
 		</div>
 	</div>
-	<div class="box">
-		<br>
-		<a href="https://songcuya.com" style="text-decoration: underline;"><p>HOME</p></a>
-		<p>[?] Send Email: 
-		  <a href="mailto:wscaspejr@songcuya.com" style="text-decoration: underline;">wscaspejr@songcuya.com</a>
-		</p>
-		<br>
-	</div>
+	<footer>
+		<a href="https://songcuya.com" style="text-decoration: underline;">HOME</a>
+		<p>[?] Send Email: <a href="mailto:wscaspejr@songcuya.com" style="text-decoration: underline;">wscaspejr@songcuya.com</a></p>
+	</footer>
   	<script src="./fxdscript.js"></script>
 </body>
 </html>

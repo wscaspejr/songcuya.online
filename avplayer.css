@@ -1,0 +1,15 @@
+#playlist {
+list-style-type: decimal-leading-zero;  
+}
+#playlist li {
+	text-align: left;
+	padding-bottom: 5px;
+}
+#playlist li:hover{
+	text-decoration: underline;
+	text-decoration-color: rgb(150, 150, 150);
+	color: #ff0000;
+} 
+#playlist li.highlight {
+	font-weight: bold;
+} 
